@@ -1,0 +1,15 @@
+{
+  "name": "gia-su-python-goi-mo-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tin học không khó - Gia sư Python gợi mở trực tuyến",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

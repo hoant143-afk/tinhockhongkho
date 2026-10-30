@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d2533">
+  <meta name="description" content="Tin học không khó - Gia sư Python gợi mở. Học lập trình Python qua từng câu hỏi ngắn, không vội xem đáp án.">
+  <title>Gia sư Python gợi mở | Tin học không khó</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a href="/" class="brand" aria-label="Tin học không khó - trang chủ">
+        <span class="brand-icon" aria-hidden="true">&gt;_</span>
+        <span class="brand-text"><strong>TIN HỌC KHÔNG KHÓ</strong><small>GIA SƯ PYTHON GỢI MỞ</small></span>
+      </a>
+      <nav class="top-nav" aria-label="Điều hướng">
+        <a href="#cach-hoc">Cách học</a>
+        <a href="#hoi-dap">Hỏi đáp</a>
+      </nav>
+      <div class="header-actions"><span class="availability"><i></i> Học Python cùng AI</span><button class="menu-button" id="menu-button" type="button" aria-label="Mở hướng dẫn" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar" id="sidebar" aria-label="Thông tin gia sư">
+        <div class="aside-scroll">
+          <div class="sidebar-intro">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> HỌC ĐỂ HIỂU, KHÔNG CHÉP ĐÁP ÁN</span>
+            <h1>Em thử nghĩ.<br><span>Gia sư gợi mở.</span></h1>
+            <p>Gửi đề bài hoặc đoạn code Python. Gia sư sẽ cùng em tìm ra cách giải từng bước.</p>
+          </div>
+          <button id="new-chat-side" type="button" class="new-chat"><span class="plus-circle" aria-hidden="true">+</span> Cuộc trò chuyện mới <span class="right-arrow" aria-hidden="true">↗</span></button>
+          <section class="aside-section" id="cach-hoc">
+            <div class="section-top"><span class="section-label">LỘ TRÌNH HỌC</span><span class="tiny-caption">03 BƯỚC</span></div>
+            <ol class="steps">
+              <li><span class="step-number">01</span><div><strong>Gửi bài tập</strong><small>Nhập đề, code hoặc gửi ảnh</small></div></li>
+              <li><span class="step-number">02</span><div><strong>Trả lời câu hỏi</strong><small>Mỗi lượt một câu gợi mở</small></div></li>
+              <li><span class="step-number">03</span><div><strong>Hiểu và luyện tập</strong><small>Xem code, ví dụ và thử thách</small></div></li>
+            </ol>
+          </section>
+          <section class="aside-section examples-section">
+            <div class="section-top"><span class="section-label">THỬ VỚI BÀI TẬP</span></div>
+            <div class="example-list">
+              <button type="button" class="example-btn" data-prompt="Viết chương trình nhập một số nguyên n và kiểm tra n là số chẵn hay số lẻ. Hãy hướng dẫn em từng bước."><span class="example-emoji" aria-hidden="true">⌘</span><span>Kiểm tra chẵn – lẻ</span><span class="example-chevron" aria-hidden="true">↗</span></button>
+              <button type="button" class="example-btn" data-prompt="Viết chương trình tính tổng các số từ 1 đến n bằng vòng lặp for. Hãy gợi mở để em tự làm."><span class="example-emoji" aria-hidden="true">∑</span><span>Tính tổng từ 1 đến n</span><span class="example-chevron" aria-hidden="true">↗</span></button>
+              <button type="button" class="example-btn" data-prompt="Giúp em tìm lỗi trong đoạn code này:\n\nn = int(input())\nif n % 2 = 0:\n    print('Chan')\nelse:\n    print('Le')"><span class="example-emoji" aria-hidden="true">&lt;/&gt;</span><span>Tìm lỗi trong code</span><span class="example-chevron" aria-hidden="true">↗</span></button>
+            </div>
+          </section>
+          <div class="aside-note"><span class="note-icon" aria-hidden="true">✦</span><div><strong>Học theo tốc độ của em</strong><p>Không cần tài khoản ChatGPT. Lịch sử lưu trên trình duyệt này và có thể mất khi em xóa dữ liệu trình duyệt.</p></div></div>
+        </div>
+        <div class="sidebar-footer"><span class="tiny-logo">&gt;_</span><span>Made for curious minds.</span></div>
+      </aside>
+      <main class="chat-area" id="hoi-dap">
+        <div class="chat-panel">
+          <div class="chat-header">
+            <div class="chat-agent"><div class="agent-avatar" aria-hidden="true"><svg viewBox="0 0 36 36" width="28" height="28" fill="none"><rect x="5" y="8" width="26" height="22" rx="8" fill="currentColor" opacity=".17"/><rect x="8" y="10" width="20" height="18" rx="6" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="18" r="2" fill="currentColor"/><circle cx="22" cy="18" r="2" fill="currentColor"/><path d="M14 23c2.5 2 5.5 2 8 0M18 5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div><strong>Gia sư Python</strong><div class="agent-sub"><span class="online-dot"></span><span>Trợ lý học tập · Tiếng Việt</span></div></div></div>
+            <div class="chat-header-actions"><span class="model-tag" title="Trả lời nhờ mô hình Gemini do chủ trang web kết nối">✦ AI GỢI MỞ</span><button type="button" id="clear-chat" class="icon-button reset-button" title="Bắt đầu cuộc trò chuyện mới" aria-label="Bắt đầu cuộc trò chuyện mới"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.4 9A7 7 0 0 1 18 7l2 5M4 12l2 5A7 7 0 0 0 18.6 15"/></svg></button></div>
+          </div>
+          <div class="message-scroller" id="message-scroller" role="log" aria-live="polite" aria-relevant="additions text">
+            <div class="welcome-content" id="welcome-content">
+              <div class="welcome-glow"><div class="welcome-avatar" aria-hidden="true">&gt;_</div></div>
+              <div class="mini-eyebrow">CHÀO MỪNG EM ĐẾN VỚI</div>
+              <h2>Gia sư Python <span>gợi mở</span><span class="sparkle" aria-hidden="true">✦</span></h2>
+              <p>Đừng vội tìm đáp án. Mình cùng khám phá cách giải qua <strong>2 câu hỏi nhỏ</strong> nhé!</p>
+              <div class="suggested-prompts" aria-label="Câu hỏi gợi ý">
+                <button type="button" data-prompt="Em muốn được hướng dẫn giải một bài Python qua từng câu hỏi gợi mở. Em cần bắt đầu như thế nào?"><span aria-hidden="true">💡</span> Hướng dẫn em giải bài Python <span class="suggest-arrow" aria-hidden="true">↗</span></button>
+                <button type="button" data-prompt="Giúp em tìm lỗi trong đoạn code Python này. Em sẽ gửi code ở tin nhắn tiếp theo."><span aria-hidden="true">🔧</span> Giúp em sửa lỗi code <span class="suggest-arrow" aria-hidden="true">↗</span></button>
+                <button type="button" data-prompt="Em chưa hiểu đề bài Python. Hãy chỉ em cách phân tích đề, em sẽ gửi đề ngay sau đây."><span aria-hidden="true">📖</span> Em chưa hiểu đề bài <span class="suggest-arrow" aria-hidden="true">↗</span></button>
+              </div>
+            </div>
+            <div class="messages" id="messages"></div>
+            <div class="typing-indicator" id="typing-indicator" hidden><div class="message-avatar" aria-hidden="true">✦</div><div class="typing-pill"><span></span><span></span><span></span><span class="typing-label">Gia sư đang suy nghĩ...</span></div></div>
+          </div>
+          <div class="composer-section">
+            <div id="error-banner" class="error-banner" hidden role="alert"></div>
+            <div class="mode-row"><div class="mode-switch" role="group" aria-label="Chế độ học"><button type="button" class="mode-btn active" data-mode="coach" aria-pressed="true"><span>✦</span> Hỏi gợi mở</button><button type="button" class="mode-btn" data-mode="explain" aria-pressed="false"><span>☷</span> Giải thích lý thuyết</button></div><span class="phase-label" id="phase-label">Sẵn sàng học tập</span></div>
+            <div class="attachment-bar" id="attachment-bar" hidden><span class="attachment-symbol">📎</span><span id="attachment-name"></span><button id="remove-attachment" type="button" aria-label="Xóa tệp đính kèm">×</button></div>
+            <form class="composer" id="chat-form"><label class="sr-only" for="user-input">Nhập bài tập hoặc câu hỏi Python</label><textarea id="user-input" rows="2" maxlength="18000" placeholder="Nhập đề bài, câu hỏi hoặc dán code Python của em..." autocomplete="off"></textarea><div class="composer-toolbar"><div class="tool-buttons"><input id="file-input" type="file" hidden accept=".py,.txt,.md,.json,.csv,.jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"><button type="button" class="attach-button" id="attach-button" title="Đính kèm ảnh hoặc file code" aria-label="Đính kèm ảnh hoặc file code"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m20 11.5-7.4 7.4a5 5 0 1 1-7.1-7.1l8.7-8.7a3.5 3.5 0 1 1 5 5l-8.8 8.8a2 2 0 0 1-2.8-2.8l7.7-7.7"/></svg><span>Đính kèm</span></button><span class="file-help">Ảnh, .py, .txt (ảnh ≤ 2 MB)</span></div><button class="send-button" type="submit" id="send-button"><span>Gửi tin nhắn</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 15-8-4 16-3-6-8-2Z"/><path d="m12 14 7-10"/></svg></button></div></form>
+            <p class="chat-disclaimer">Gia sư AI có thể mắc lỗi. Hãy chạy thử chương trình và hỏi giáo viên khi cần. <span aria-hidden="true">✧</span> Không chia sẻ dữ liệu cá nhân nhạy cảm.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="page-footer"><span>© 2026 Tin học không khó</span><span>Học Python bằng sự tò mò và kiên trì.</span><a href="mailto:thihoaqaqs@gmail.com">Liên hệ hỗ trợ</a></footer>
+  </div>
+  <dialog id="confirm-dialog" class="confirm-dialog" aria-labelledby="confirm-title"><form method="dialog"><div class="dialog-mark">↻</div><h2 id="confirm-title">Bắt đầu cuộc trò chuyện mới?</h2><p>Lịch sử của cuộc trò chuyện hiện tại trên trình duyệt này sẽ bị xóa.</p><div class="dialog-actions"><button type="submit" value="cancel" class="btn-cancel">Giữ lại</button><button type="submit" value="confirm" class="btn-confirm">Xóa và bắt đầu mới</button></div></form></dialog>
+</body>
+</html>

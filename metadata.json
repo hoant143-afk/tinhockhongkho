@@ -1,0 +1,6 @@
+{
+  "name": "Gia sư Python",
+  "description": "Chatbot Gia sư Python gợi mở cho học sinh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
